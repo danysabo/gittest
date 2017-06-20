@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class First extends Object {
-    int br;
+    int br; //mali int
     Integer br1;
     First f1;
 
