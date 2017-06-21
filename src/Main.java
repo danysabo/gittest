@@ -10,6 +10,27 @@ import java.util.Set;
 public class Main {
 
     public static void main(String[] args) {
+
+        Soba soba = new Soba(new Fotelja(120, 160, 110),
+                new RadniSto(180, 80, 80),
+                new Osvetljenje(new NocnoSvetlo(20, false),
+                        new GlavnoSvetlo(160, true)),
+                new Prozor(100, 160, false));
+
+        soba.prozor.openWindow(false);
+        soba.prozor.openWindow(true);
+
+        soba.osvetljenje.glavnoOnOff(false);
+        soba.osvetljenje.nocnoOnOff(true);
+
+        System.out.println(soba.osvetljenje.nocnoSvetlo.getPower() + "W");
+
+        soba.radniSto.learning("Boris", 6);
+
+        soba.fotelja.sitDown("Nikola");
+    }
+
+    public static void main5(String[] args) {
         GenericClass<First> gc = new GenericClass<>(new Second());
         First polje = gc.getElem();
         System.out.println(polje);
