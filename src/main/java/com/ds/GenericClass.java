@@ -1,3 +1,5 @@
+package com.ds;
+
 public class GenericClass<T> {
     private final T elem;
 
